@@ -1,101 +1,502 @@
-import Image from "next/image";
+// import { Button } from "@/components/ui/button";
+// import Image from "next/image";
+// import { Fragment } from "react";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main>
+        <section className="hero">
+        <div className="container">
+            <div className="hero__slider owl-carousel">
+                <div className="hero__items set-bg" data-setbg="img/hero/hero-1.jpg">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="hero__text">
+                                <div className="label">Adventure</div>
+                                <h2>Fate / Stay Night: Unlimited Blade Works</h2>
+                                <p>After 30 days of travel across the world...</p>
+                                <a href="#"><span>Watch Now</span> <i className="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="hero__items set-bg" data-setbg="img/hero/hero-1.jpg">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="hero__text">
+                                <div className="label">Adventure</div>
+                                <h2>Fate / Stay Night: Unlimited Blade Works</h2>
+                                <p>After 30 days of travel across the world...</p>
+                                <a href="#"><span>Watch Now</span> <i className="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="hero__items set-bg" data-setbg="img/hero/hero-1.jpg">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="hero__text">
+                                <div className="label">Adventure</div>
+                                <h2>Fate / Stay Night: Unlimited Blade Works</h2>
+                                <p>After 30 days of travel across the world...</p>
+                                <a href="#"><span>Watch Now</span> <i className="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </section>
+
+        <section className="product spad">
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-8">
+                        <div className="trending__product">
+                            <div className="row">
+                                <div className="col-lg-8 col-md-8 col-sm-8">
+                                    <div className="section-title">
+                                        <h4>Trending Now</h4>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-4 col-sm-4">
+                                    <div className="btn__all">
+                                        <a href="#" className="primary-btn">View All <span className="arrow_right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-lg-4 col-md-6 col-sm-6">
+                                    <div className="product__item">
+                                        <div className="product__item__pic">
+                                            <img src="img/trending/trend-1.jpg" alt="" />
+                                            <div className="ep">18 / 18</div>
+                                            <div className="comment"><i className="fa fa-comments"></i> 11</div>
+                                            <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                        </div>
+                                        <div className="product__item__text">
+                                            <ul>
+                                                <li>Active</li>
+                                                <li>Movie</li>
+                                            </ul>
+                                            <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6 col-sm-6">
+                                    <div className="product__item">
+                                        <div className="product__item__pic">
+                                            <img src="img/trending/trend-2.jpg" alt="" />
+                                            <div className="ep">18 / 18</div>
+                                            <div className="comment"><i className="fa fa-comments"></i> 11</div>
+                                            <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                        </div>
+                                        <div className="product__item__text">
+                                            <ul>
+                                                <li>Active</li>
+                                                <li>Movie</li>
+                                            </ul>
+                                            <h5><a href="#">Gintama Movie 2: Kanketsu-hen - Yorozuya yo Eien</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6 col-sm-6">
+                                    <div className="product__item">
+                                        <div className="product__item__pic">
+                                            <img src="img/trending/trend-3.jpg" alt="" />
+                                            <div className="ep">18 / 18</div>
+                                            <div className="comment"><i className="fa fa-comments"></i> 11</div>
+                                            <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                        </div>
+                                        <div className="product__item__text">
+                                            <ul>
+                                                <li>Active</li>
+                                                <li>Movie</li>
+                                            </ul>
+                                            <h5><a href="#">Shingeki no Kyojin Season 3 Part 2</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6 col-sm-6">
+                                    <div className="product__item">
+                                        <div className="product__item__pic">
+                                            <img src="img/trending/trend-4.jpg" alt="" />
+                                            <div className="ep">18 / 18</div>
+                                            <div className="comment"><i className="fa fa-comments"></i> 11</div>
+                                            <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                        </div>
+                                        <div className="product__item__text">
+                                            <ul>
+                                                <li>Active</li>
+                                                <li>Movie</li>
+                                            </ul>
+                                            <h5><a href="#">Fullmetal Alchemist: Brotherhood</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6 col-sm-6">
+                                    <div className="product__item">
+                                        <div className="product__item__pic">
+                                            <img src="img/trending/trend-5.jpg" alt="" />
+                                            <div className="ep">18 / 18</div>
+                                            <div className="comment"><i className="fa fa-comments"></i> 11</div>
+                                            <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                        </div>
+                                        <div className="product__item__text">
+                                            <ul>
+                                                <li>Active</li>
+                                                <li>Movie</li>
+                                            </ul>
+                                            <h5><a href="#">Shiratorizawa Gakuen Koukou</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6 col-sm-6">
+                                    <div className="product__item">
+                                        <div className="product__item__pic">
+                                            <img src="img/trending/trend-6.jpg" alt="" />
+                                            <div className="ep">18 / 18</div>
+                                            <div className="comment"><i className="fa fa-comments"></i> 11</div>
+                                            <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                        </div>
+                                        <div className="product__item__text">
+                                            <ul>
+                                                <li>Active</li>
+                                                <li>Movie</li>
+                                            </ul>
+                                            <h5><a href="#">Code Geass: Hangyaku no Lelouch R2</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="popular__product">
+                            <div className="row">
+                                <div className="col-lg-8 col-md-8 col-sm-8">
+                                    <div className="section-title">
+                                        <h4>Popular Shows</h4>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-4 col-sm-4">
+                                    <div className="btn__all">
+                                        <a href="#" className="primary-btn">View All <span className="arrow_right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-lg-4 col-md-6 col-sm-6">
+                                    <div className="product__item">
+                                        <div className="product__item__pic">
+                                            <img src="img/popular/popular-1.jpg" alt="" />
+                                            <div className="ep">18 / 18</div>
+                                            <div className="comment"><i className="fa fa-comments"></i> 11</div>
+                                            <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                        </div>
+                                        <div className="product__item__text">
+                                            <ul>
+                                                <li>Active</li>
+                                                <li>Movie</li>
+                                            </ul>
+                                            <h5><a href="#">Sen to Chihiro no Kamikakushi</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6 col-sm-6">
+                                    <div className="product__item">
+                                        <div className="product__item__pic">
+                                            <img src="img/popular/popular-2.jpg" alt="" />
+                                            <div className="ep">18 / 18</div>
+                                            <div className="comment"><i className="fa fa-comments"></i> 11</div>
+                                            <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                        </div>
+                                        <div className="product__item__text">
+                                            <ul>
+                                                <li>Active</li>
+                                                <li>Movie</li>
+                                            </ul>
+                                            <h5><a href="#">Kizumonogatari III: Reiket su-hen</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6 col-sm-6">
+                                    <div className="product__item">
+                                        <div className="product__item__pic">
+                                            <img src="img/popular/popular-3.jpg" alt="" />
+                                            <div className="ep">18 / 18</div>
+                                            <div className="comment"><i className="fa fa-comments"></i> 11</div>
+                                            <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                        </div>
+                                        <div className="product__item__text">
+                                            <ul>
+                                                <li>Active</li>
+                                                <li>Movie</li>
+                                            </ul>
+                                            <h5><a href="#">Shirogane Tamashii hen Kouhan sen</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6 col-sm-6">
+                                    <div className="product__item">
+                                        <div className="product__item__pic">
+                                            <img src="img/popular/popular-4.jpg" alt="" />
+                                            <div className="ep">18 / 18</div>
+                                            <div className="comment"><i className="fa fa-comments"></i> 11</div>
+                                            <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                        </div>
+                                        <div className="product__item__text">
+                                            <ul>
+                                                <li>Active</li>
+                                                <li>Movie</li>
+                                            </ul>
+                                            <h5><a href="#">Rurouni Kenshin: Meiji Kenkaku Romantan</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6 col-sm-6">
+                                    <div className="product__item">
+                                        <div className="product__item__pic">
+                                            <img src="img/popular/popular-5.jpg" alt="" />
+                                            <div className="ep">18 / 18</div>
+                                            <div className="comment"><i className="fa fa-comments"></i> 11</div>
+                                            <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                        </div>
+                                        <div className="product__item__text">
+                                            <ul>
+                                                <li>Active</li>
+                                                <li>Movie</li>
+                                            </ul>
+                                            <h5><a href="#">Mushishi Zoku Shou 2nd Season</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6 col-sm-6">
+                                    <div className="product__item">
+                                        <div className="product__item__pic">
+                                            <img src="img/popular/popular-6.jpg" alt="" />
+                                            <div className="ep">18 / 18</div>
+                                            <div className="comment"><i className="fa fa-comments"></i> 11</div>
+                                            <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                        </div>
+                                        <div className="product__item__text">
+                                            <ul>
+                                                <li>Active</li>
+                                                <li>Movie</li>
+                                            </ul>
+                                            <h5><a href="#">Monogatari Series: Second Season</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="recent__product">
+                            <div className="row">
+                                <div className="col-lg-8 col-md-8 col-sm-8">
+                                    <div className="section-title">
+                                        <h4>Recently Added Shows</h4>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-4 col-sm-4">
+                                    <div className="btn__all">
+                                        <a href="#" className="primary-btn">View All <span className="arrow_right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-lg-4 col-md-6 col-sm-6">
+                                    <div className="product__item">
+                                        <div className="product__item__pic">
+                                            <img src="img/recent/recent-1.jpg" alt="" />
+                                            <div className="ep">18 / 18</div>
+                                            <div className="comment"><i className="fa fa-comments"></i> 11</div>
+                                            <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                        </div>
+                                        <div className="product__item__text">
+                                            <ul>
+                                                <li>Active</li>
+                                                <li>Movie</li>
+                                            </ul>
+                                            <h5><a href="#">Great Teacher Onizuka</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6 col-sm-6">
+                                    <div className="product__item">
+                                        <div className="product__item__pic">
+                                            <img src="img/recent/recent-3.jpg" alt="" />
+                                            <div className="ep">18 / 18</div>
+                                            <div className="comment"><i className="fa fa-comments"></i> 11</div>
+                                            <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                        </div>
+                                        <div className="product__item__text">
+                                            <ul>
+                                                <li>Active</li>
+                                                <li>Movie</li>
+                                            </ul>
+                                            <h5><a href="#">Mushishi Zoku Shou: Suzu no Shizuku</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6 col-sm-6">
+                                    <div className="product__item">
+                                        <div className="product__item__pic">
+                                            <img src="img/recent/recent-4.jpg" alt="" />
+                                            <div className="ep">18 / 18</div>
+                                            <div className="comment"><i className="fa fa-comments"></i> 11</div>
+                                            <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                        </div>
+                                        <div className="product__item__text">
+                                            <ul>
+                                                <li>Active</li>
+                                                <li>Movie</li>
+                                            </ul>
+                                            <h5><a href="#">Fate/Zero 2nd Season</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6 col-sm-6">
+                                    <div className="product__item">
+                                        <div className="product__item__pic">
+                                            <img src="img/recent/recent-5.jpg" alt="" />
+                                            <div className="ep">18 / 18</div>
+                                            <div className="comment"><i className="fa fa-comments"></i> 11</div>
+                                            <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                        </div>
+                                        <div className="product__item__text">
+                                            <ul>
+                                                <li>Active</li>
+                                                <li>Movie</li>
+                                            </ul>
+                                            <h5><a href="#">Kizumonogatari II: Nekket su-hen</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6 col-sm-6">
+                                    <div className="product__item">
+                                        <div className="product__item__pic">
+                                            <img src="img/recent/recent-6.jpg" alt="" />
+                                            <div className="ep">18 / 18</div>
+                                            <div className="comment"><i className="fa fa-comments"></i> 11</div>
+                                            <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                        </div>
+                                        <div className="product__item__text">
+                                            <ul>
+                                                <li>Active</li>
+                                                <li>Movie</li>
+                                            </ul>
+                                            <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-4 col-md-6 col-sm-8">
+                        <div className="product__sidebar">
+                            <div className="product__sidebar__view">
+                                <div className="section-title">
+                                    <h5>Top Views</h5>
+                                </div>
+                                <ul className="filter__controls">
+                                    <li className="active" data-filter="*">Day</li>
+                                    <li data-filter=".week">Week</li>
+                                    <li data-filter=".month">Month</li>
+                                    <li data-filter=".years">Years</li>
+                                </ul>
+                                <div className="filter__gallery">
+                                    <div className="product__sidebar__view__item mix day years">
+                                    <img src="img/sidebar/tv-1.jpg" alt="" />
+                                    <div className="ep">18 / ?</div>
+                                    <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                    <h5><a href="#">Boruto: Naruto next generations</a></h5>
+                                </div>
+                                    <div className="product__sidebar__view__item mix day years">
+                                    <img src="img/sidebar/tv-2.jpg" alt="" />
+                                <div className="ep">18 / ?</div>
+                                <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                                <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                            </div>
+                                    <div className="product__sidebar__view__item mix day years">
+                                    <img src="img/sidebar/tv-3.jpg" alt="" />
+                            <div className="ep">18 / ?</div>
+                            <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                            <h5><a href="#">Sword art online alicization war of underworld</a></h5>
+                        </div>
+                                    <div className="product__sidebar__view__item mix day years">
+                                    <img src="img/sidebar/tv-4.jpg" alt="" />
+                        <div className="ep">18 / ?</div>
+                        <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                        <h5><a href="#">Fate/stay night: Heaven Feel I. presage flower</a></h5>
+                    </div>
+                                    <div className="product__sidebar__view__item mix day years">
+                                    <img src="img/sidebar/tv-5.jpg" alt="" />
+                    <div className="ep">18 / ?</div>
+                    <div className="view"><i className="fa fa-eye"></i> 9141</div>
+                    <h5><a href="#">Fate stay night unlimited blade works</a></h5>
+                </div>
+            </div>
+        </div>
+        <div className="product__sidebar__comment">
+            <div className="section-title">
+                <h5>New Comment</h5>
+            </div>
+            <div className="product__sidebar__comment__item">
+                <div className="product__sidebar__comment__item__pic">
+                    <img src="img/sidebar/comment-1.jpg" alt="" />
+                </div>
+                <div className="product__sidebar__comment__item__text">
+                    <ul>
+                        <li>Active</li>
+                        <li>Movie</li>
+                    </ul>
+                    <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                    <span><i className="fa fa-eye"></i> 19.141 Viewes</span>
+                </div>
+            </div>
+            <div className="product__sidebar__comment__item">
+                <div className="product__sidebar__comment__item__pic">
+                    <img src="img/sidebar/comment-2.jpg" alt="" />
+                </div>
+                <div className="product__sidebar__comment__item__text">
+                    <ul>
+                        <li>Active</li>
+                        <li>Movie</li>
+                    </ul>
+                    <h5><a href="#">Shirogane Tamashii hen Kouhan sen</a></h5>
+                    <span><i className="fa fa-eye"></i> 19.141 Viewes</span>
+                </div>
+            </div>
+            <div className="product__sidebar__comment__item">
+                <div className="product__sidebar__comment__item__pic">
+                    <img src="img/sidebar/comment-3.jpg" alt="" />
+                </div>
+                <div className="product__sidebar__comment__item__text">
+                    <ul>
+                        <li>Active</li>
+                        <li>Movie</li>
+                    </ul>
+                    <h5><a href="#">Kizumonogatari III: Reiket su-hen</a></h5>
+                    <span><i className="fa fa-eye"></i> 19.141 Viewes</span>
+                </div>
+            </div>
+            <div className="product__sidebar__comment__item">
+                <div className="product__sidebar__comment__item__pic">
+                    <img src="img/sidebar/comment-4.jpg" alt="" />
+                </div>
+                <div className="product__sidebar__comment__item__text">
+                    <ul>
+                        <li>Active</li>
+                        <li>Movie</li>
+                    </ul>
+                    <h5><a href="#">Monogatari Series: Second Season</a></h5>
+                    <span><i className="fa fa-eye"></i> 19.141 Viewes</span>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+    </main>
   );
 }
