@@ -17,7 +17,20 @@ type cate = {
     img: string,
     so_thu_tu: number,
     children: Array<cate>,
-    ds_games: Array<cate>,
+    ds_games: gameDetail[],
+}
+type gameDetail = {
+    id: string,
+    slug: string,
+    ten: string,
+    iframe: string,
+    title: string,
+    description: string,
+    img: string,
+    is_new: boolean,
+    is_trending: boolean,
+    is_menu: boolean,
+    ten_category: string
 }
 const initData : cate = {
     id: '',
@@ -83,7 +96,7 @@ export default function CategoriesPage({slug} : Props){
                                     </div>
                                 </div>
                                 <div className="row">
-                                    {cateDetail?.ds_games?.map((game: any) => (
+                                    {cateDetail?.ds_games?.map((game: gameDetail) => (
                                     <div className="col-lg-3 col-md-4 col-sm-6" key={game.id}>
                                         <div className="product__item">
                                             <div className="product__item__pic">

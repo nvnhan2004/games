@@ -1,7 +1,7 @@
 import http from '@/lib/http'
 import {
-  GamesListResType,
-  GamesResType
+  GamesListResType
+  // GamesResType
 } from '@/schemaValidations/games.schema'
 
 const gamesApiRequest = {

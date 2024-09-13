@@ -1,8 +1,8 @@
 import http from '@/lib/http'
-import {
-  CategoriesListResType,
-  CategoriesResType
-} from '@/schemaValidations/categories.schema'
+// import {
+//   CategoriesListResType,
+//   CategoriesResType
+// } from '@/schemaValidations/categories.schema'
 
 const categoriesApiRequest = {
   getCateMenu: () => http.get('categories/get-categories-menu'),
