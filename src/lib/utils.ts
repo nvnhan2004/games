@@ -2,7 +2,7 @@ import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 import { UseFormSetError } from 'react-hook-form'
 import { toast } from "@/components/ui/use-toast"
-import jwt from 'jsonwebtoken'
+// import jwt from 'jsonwebtoken'
 import { EntityError, err } from "./http"
 
 export function cn(...inputs: ClassValue[]) {
@@ -41,6 +41,6 @@ export const normalizePath = (path: string) => {
   return path.startsWith('/') ? path.slice(1) : path
 }
 
-export const decodeJWT = <Payload = any>(token: string) => {
-  return jwt.decode(token) as Payload
-}
+// export const decodeJWT = <Payload = any>(token: string) => {
+//   return jwt.decode(token) as Payload
+// }
