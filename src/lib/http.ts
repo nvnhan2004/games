@@ -171,6 +171,7 @@ const http = {
   },
   post<Response>(
     url: string,
+    /* eslint-disable  @typescript-eslint/no-explicit-any */
     body: any,
     options?: Omit<CustomOptions, 'body'> | undefined
   ) {
