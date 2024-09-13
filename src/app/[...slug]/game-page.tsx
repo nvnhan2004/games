@@ -5,13 +5,27 @@ import Link from "next/link";
 import { useState, useEffect, Fragment } from 'react'
 
 type Props = {
-    slug: any
+    slugCate: string
+    slugGame: string
 }
-
-const initData = {
+type gameDetail = {
+    id: string,
+    slug: string,
+    ten: string,
+    iframe: string,
+    title: string,
+    description: string,
+    img: string,
+    is_new: boolean,
+    is_trending: boolean,
+    is_menu: boolean,
+    ten_category: string
+}
+const initData : gameDetail = {
     id: '',
     slug: '',
     ten: '',
+    iframe: '',
     title: '',
     description: '',
     img: '',
@@ -21,13 +35,13 @@ const initData = {
     ten_category: ''
 }
 
-export default function GamePage({slug} : Props){
-    const [gameDetail, setGameDetail] = useState<any>(initData)
+export default function GamePage({slugCate, slugGame} : Props){
+    const [gameDetail, setGameDetail] = useState<gameDetail>(initData)
 
     useEffect(() => {
-        const fetchData = async () => {
-            const result = await gamesApiRequest.getDetail(slug[1])
-            return result.payload;
+        const fetchData = async () : Promise<gameDetail> => {
+            const { payload } = await gamesApiRequest.getDetail(slugGame)
+            return payload as gameDetail;
             
         }
         fetchData().then(res => {
@@ -43,7 +57,7 @@ export default function GamePage({slug} : Props){
                         <div className="col-lg-12">
                             <div className="breadcrumb__links">
                                 <Link href="./"><i className="fa fa-home"></i> Home</Link>
-                                <Link href={`./${slug[0]}`}>{gameDetail.ten_category}</Link>
+                                <Link href={`./${slugCate}`}>{gameDetail.ten_category}</Link>
                                 <span>{gameDetail.ten || ''}</span>
                             </div>
                         </div>

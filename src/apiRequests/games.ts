@@ -6,6 +6,6 @@ import {
 
 const gamesApiRequest = {
   getGamesByGames: (cate: string) => http.get<GamesListResType>(`games/get-by-categories/${cate}`),
-  getDetail: (slug: string) => http.get<GamesResType>(`games/get-detail/${slug}`)}
+  getDetail: (slug: string) => http.get(`games/get-detail/${slug}`)}
 
 export default gamesApiRequest

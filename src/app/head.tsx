@@ -4,18 +4,29 @@ import categoriesApiRequest from "@/apiRequests/categories";
 import Link from "next/link";
 import { useState, useEffect } from 'react'
 
+type cate = {
+    id: string,
+    slug: string,
+    ten: string,
+    title: string,
+    description: string,
+    img: string,
+    so_thu_tu: number,
+    children: cate[],
+    ds_games: Array<cate>,
+}
 
 export default function Head(){
     
-    const [dataCate, setDataCate] = useState<any>()
+    const [dataCate, setDataCate] = useState<cate[]>()
 
     useEffect(() => {
-        const fetchData = async () => {
-            const result = await categoriesApiRequest.getCateMenu()
-            return result.payload;
+        const fetchData = async () : Promise<cate[]> => {
+            const { payload } = await categoriesApiRequest.getCateMenu()
+            return payload as cate[];
             
         }
-        fetchData().then(res => {
+        fetchData().then((res) => {
             setDataCate(res)
         })
         
@@ -53,12 +64,12 @@ export default function Head(){
                                     </li>
                                     <li><Link href="./blog.html">Our Blog</Link></li>
                                     <li><Link href="#">Contacts</Link></li> */}
-                                    {dataCate?.map((cate: any) => (
+                                    {dataCate?.map((cate: cate) => (
                                         <li key={cate.id}>
                                             <Link href={cate.slug}>{cate.ten}{cate.children.length > 0 &&<span className="arrow_carrot-down"></span>}</Link>
                                             {cate.children.length > 0 &&
                                             <ul className="dropdown">
-                                                {cate.children?.map((cateChildren: any) => (
+                                                {cate.children?.map((cateChildren: cate) => (
                                                     <li key={cateChildren.id}><Link href={`/${cateChildren.slug}`}>{cateChildren.ten}</Link></li>
                                                 ))}
                                             </ul>

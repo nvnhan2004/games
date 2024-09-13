@@ -5,9 +5,9 @@ import {
 } from '@/schemaValidations/categories.schema'
 
 const categoriesApiRequest = {
-  getCateMenu: () => http.get<CategoriesListResType>('categories/get-categories-menu'),
+  getCateMenu: () => http.get('categories/get-categories-menu'),
   getDetail: (slug: string) =>
-    http.get<CategoriesResType>(`categories/get-detail/${slug}`, {
+    http.get(`categories/get-detail/${slug}`, {
       cache: 'no-store'
     })
 }

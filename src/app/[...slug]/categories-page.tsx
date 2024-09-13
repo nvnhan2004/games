@@ -8,18 +8,18 @@ type Props = {
     slug: string
 }
 
-// type game = {
-//     id: string,
-//     slug: string,
-//     ten: string,
-//     title: string,
-//     description: string,
-//     img: string,
-//     so_thu_tu: 0,
-//     children: Array<game>,
-//     ds_games: Array<game>,
-// }
-const initData = {
+type cate = {
+    id: string,
+    slug: string,
+    ten: string,
+    title: string,
+    description: string,
+    img: string,
+    so_thu_tu: number,
+    children: Array<cate>,
+    ds_games: Array<cate>,
+}
+const initData : cate = {
     id: '',
     slug: '',
     ten: '',
@@ -32,16 +32,15 @@ const initData = {
 }
 
 export default function CategoriesPage({slug} : Props){
-    const [cateDetail, setCateDetail] = useState<any>(initData)
+    const [cateDetail, setCateDetail] = useState<cate>(initData)
 
     useEffect(() => {
-        const fetchData = async () => {
-            const result = await categoriesApiRequest.getDetail(slug)
-            return result.payload;
-            
+        const fetchData = async (): Promise<cate>  => {
+            const {payload} = await categoriesApiRequest.getDetail(slug)
+            return payload as cate;
         }
-        fetchData().then(res => {
-            setCateDetail(res)
+        fetchData().then((res) => {
+            setCateDetail(res as cate)
         })
     }, [])
 
@@ -53,7 +52,7 @@ export default function CategoriesPage({slug} : Props){
                         <div className="col-lg-12">
                             <div className="breadcrumb__links">
                                 <a href="./"><i className="fa fa-home"></i> Home</a>
-                                <span>{cateDetail.ten || ''}</span>
+                                <span>{cateDetail?.ten || ''}</span>
                             </div>
                         </div>
                     </div>
@@ -68,7 +67,7 @@ export default function CategoriesPage({slug} : Props){
                                     <div className="row">
                                         <div className="col-lg-8 col-md-8 col-sm-6">
                                             <div className="section-title">
-                                                <h4>{cateDetail.ten}</h4>
+                                                <h4>{cateDetail?.ten}</h4>
                                             </div>
                                         </div>
                                         <div className="col-lg-4 col-md-4 col-sm-6">
@@ -84,7 +83,7 @@ export default function CategoriesPage({slug} : Props){
                                     </div>
                                 </div>
                                 <div className="row">
-                                    {cateDetail.ds_games?.map((game: any) => (
+                                    {cateDetail?.ds_games?.map((game: any) => (
                                     <div className="col-lg-3 col-md-4 col-sm-6" key={game.id}>
                                         <div className="product__item">
                                             <div className="product__item__pic">

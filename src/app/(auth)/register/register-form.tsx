@@ -15,7 +15,7 @@ import {
 import { useState } from 'react'
 import { useRouter } from 'next/navigation';
 import authApiRequest from '@/apiRequests/auth';
-import { handleErrorApi } from '@/lib/utils';
+// import { handleErrorApi } from '@/lib/utils';
 import { useToast } from '@/components/ui/use-toast';
 import { Input } from '@/components/ui/input';
 // import { useAppContext } from '@/app/app-provider';
@@ -57,12 +57,13 @@ export default function RegisterForm(){
 
             router.push('/login')
         } 
-        catch (error: any) {
-            handleErrorApi({
-                error,
-                setError: form.setError
-            })
-        } finally {
+        // catch (error: any) {
+        //     handleErrorApi({
+        //         error,
+        //         setError: form.setError
+        //     })
+        // } 
+        finally {
             setLoading(false)
         }
     }
