@@ -174,6 +174,8 @@ const http = {
     body: any,
     options?: Omit<CustomOptions, 'body'> | undefined
   ) {
+    console.log(body);
+    
     return request<Response>('POST', url, { ...options, body })
   },
   // put<Response>(
